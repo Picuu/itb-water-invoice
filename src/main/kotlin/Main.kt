@@ -5,6 +5,8 @@ fun main() {
     val isSingleParent:Boolean = isSingleParentFamily()
     val familySize:Int = getFamilySize()
     val hasSocialBonus:Boolean = hasSocialBonus()
+
+    val fixedFee:Int = getFixedFee(hasSocialBonus)
 }
 
 /**
@@ -50,4 +52,15 @@ fun getFamilySize(): Int {
  */
 fun hasSocialBonus():Boolean {
     return readBoolean(BLUE + "Do you have a social bonus? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
+}
+
+/**
+ * This method calculates the fixed water fee based on whether the user has social bonus or not.
+ * @return Integer of the water fixed fee.
+ * @author Picuu
+ * @since 10/01/2024
+ */
+fun getFixedFee(hasSocialBonus: Boolean): Int {
+    if (hasSocialBonus) return 3
+    return 6
 }
