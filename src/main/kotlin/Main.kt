@@ -8,6 +8,7 @@ fun main() {
 
     val fixedFee:Int = getFixedFee(hasSocialBonus)
     val literCost:Float = getLiterCost(waterConsumption)
+    val waterCost:Float = getWaterCost(waterConsumption, literCost, isNumerous, isSingleParent, familySize, hasSocialBonus)
 }
 
 /**
@@ -77,4 +78,26 @@ fun getFixedFee(hasSocialBonus: Boolean): Int {
 fun getLiterCost(waterConsumption: Int):Float {
     if (waterConsumption > 200) return .3f
     return .15f
+}
+
+/**
+ * This method calculates the variable cost of the water invoice based on all deductions.
+ * @param waterConsumption Integer of the liters consumed.
+ * @param literCost Float of the cost per liter of water.
+ * @param isNumerous Boolean of whether the user forms part of a numerous family or not.
+ * @param isSingleParent Boolean of whether the user forms part of a single-parent family or not.
+ * @param familySize Integer of the amount of people on the user's family. This parameter is optional.
+ * @param hasSocialBonus Boolean of whether the user has a social bonus or not.
+ * @return Float of the final cost of the water consumed.
+ * @author Picuu
+ * @since 10/01/2024
+ */
+fun getWaterCost(waterConsumption: Int, literCost: Float, isNumerous: Boolean, isSingleParent: Boolean, familySize: Int = 0, hasSocialBonus: Boolean): Float {
+    val waterCost:Float = waterConsumption * literCost
+
+    if (hasSocialBonus) return waterCost * .2f
+    if (isNumerous) return waterCost * .5f
+    if (isSingleParent) return waterCost * (familySize / 10)
+
+    return waterCost
 }
