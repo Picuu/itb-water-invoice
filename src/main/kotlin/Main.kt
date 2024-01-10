@@ -1,7 +1,7 @@
 fun main() {
     println("$WHITE_BACKGROUND_BRIGHT$BLACK_BOLD    CALCULATE WATER INVOICE    $RESET")
     val waterConsumption:Int = getWaterConsumption()
-
+    val isNumerous:Boolean = isNumerousFamily()
 }
 
 /**
@@ -11,4 +11,13 @@ fun main() {
  */
 fun getWaterConsumption():Int {
     return readInt(BLUE + "How many liters of water have you used this month? $RESET", "Wrong data type. Please, enter a valid number!", "Value too small. Please, enter a number greater than 0!", 0)
+}
+
+/**
+ * This method calls the function readBoolean() to ask the user if he is a numerous family.
+ * @return Boolean of whether the user is a numerous family or not.
+ * @see readBoolean
+ */
+fun isNumerousFamily():Boolean {
+    return readBoolean(BLUE + "Are you a numerous family? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
 }
