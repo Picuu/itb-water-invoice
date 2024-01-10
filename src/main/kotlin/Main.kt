@@ -57,6 +57,7 @@ fun hasSocialBonus():Boolean {
 
 /**
  * This method calculates the fixed water fee based on whether the user has social bonus or not.
+ * @param hasSocialBonus Boolean of whether the user has a social bonus or not.
  * @return Integer of the water fixed fee.
  * @author Picuu
  * @since 10/01/2024
