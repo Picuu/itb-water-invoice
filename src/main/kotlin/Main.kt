@@ -7,6 +7,7 @@ fun main() {
     val hasSocialBonus:Boolean = hasSocialBonus()
 
     val fixedFee:Int = getFixedFee(hasSocialBonus)
+    val literCost:Float = getLiterCost(waterConsumption)
 }
 
 /**
@@ -63,4 +64,16 @@ fun hasSocialBonus():Boolean {
 fun getFixedFee(hasSocialBonus: Boolean): Int {
     if (hasSocialBonus) return 3
     return 6
+}
+
+/**
+ * This method calculates the cost per liter of water.
+ * @param waterConsumption Integer of the liters consumed.
+ * @return Float of the cost per liter of water.
+ * @author Picuu
+ * @since 10/01/2024
+ */
+fun getLiterCost(waterConsumption: Int):Float {
+    if (waterConsumption > 200) return .3f
+    return .15f
 }
