@@ -97,7 +97,10 @@ fun getWaterCost(waterConsumption: Int, literCost: Float, isNumerous: Boolean, i
 
     if (hasSocialBonus) return waterCost * .2f
     if (isNumerous) return waterCost * .5f
-    if (isSingleParent) return waterCost * (familySize / 10)
+    if (isSingleParent) {
+        if (familySize > 5) return waterCost * .5f
+        return (waterCost * ((10 - familySize) / 10f))
+    }
 
     return waterCost
 }
