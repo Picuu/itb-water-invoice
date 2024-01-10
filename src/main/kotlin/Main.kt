@@ -2,6 +2,7 @@ fun main() {
     println("$WHITE_BACKGROUND_BRIGHT$BLACK_BOLD    CALCULATE WATER INVOICE    $RESET")
     val waterConsumption:Int = getWaterConsumption()
     val isNumerous:Boolean = isNumerousFamily()
+    val hasSocialBonus:Boolean = hasSocialBonus()
 }
 
 /**
@@ -20,4 +21,13 @@ fun getWaterConsumption():Int {
  */
 fun isNumerousFamily():Boolean {
     return readBoolean(BLUE + "Are you a numerous family? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
+}
+
+/**
+ * This method calls the function readBoolean() to ask the user if he has a social bonus.
+ * @return Boolean of whether the user has a social bonus or not.
+ * @see readBoolean
+ */
+fun hasSocialBonus():Boolean {
+    return readBoolean(BLUE + "Do you have a social bonus? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
 }
