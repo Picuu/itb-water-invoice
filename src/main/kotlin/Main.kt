@@ -2,6 +2,8 @@ fun main() {
     println("$WHITE_BACKGROUND_BRIGHT$BLACK_BOLD    CALCULATE WATER INVOICE    $RESET")
     val waterConsumption:Int = getWaterConsumption()
     val isNumerous:Boolean = isNumerousFamily()
+    val isSingleParent:Boolean = isSingleParentFamily()
+    val familySize:Int = getFamilySize()
     val hasSocialBonus:Boolean = hasSocialBonus()
 }
 
@@ -21,6 +23,24 @@ fun getWaterConsumption():Int {
  */
 fun isNumerousFamily():Boolean {
     return readBoolean(BLUE + "Are you a numerous family? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
+}
+
+/**
+ * This method calls the function readBoolean() to ask the user if he part of a single-parent family.
+ * @return Boolean of whether the user forms part of a single-parent family or not.
+ * @see readBoolean
+ */
+fun isSingleParentFamily(): Boolean {
+    return readBoolean(BLUE + "Are you part of a single-parent family? (true/false) $RESET", "Wrong data type. Please, enter a valid value!")
+}
+
+/**
+ * This method calls the function readInt() to ask the user how many people are there in his family.
+ * @return Integer with the amount of people in the family.
+ * @see readInt
+ */
+fun getFamilySize(): Int {
+    return readInt(BLUE + "How many people are there in your family? $RESET", "Wrong data type. Please, enter a valid number!", "Value too small. Please, enter a number greater than 2!", 2)
 }
 
 /**
