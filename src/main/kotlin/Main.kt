@@ -33,6 +33,20 @@ fun main() {
     }
 }
 
+/** This function prints a styled invoice, showing all discounts, deductions and prices.
+ * @param waterConsumption Integer of the liters consumed.
+ * @param literCost Float of the cost per liter of water.
+ * @param waterCost Float of the cost of the water based on the liters consumed.
+ * @param fixedFee Integer of the fixed fee import.
+ * @param totalCost Float of the total cost of the water invoice.
+ * @param hasSocialBonus Boolean of whether the user has a social bonus or not.
+ * @param isNumerous Boolean of whether the user forms part of a numerous family or not.
+ * @param isSingleParent Boolean of whether the user forms part of a single-parent family or not.
+ * @param familySize Integer of the amount of people on the user's family. This parameter is optional.
+ * @param discount Float of the discount to apply to the price.
+ * @author Picuu
+ * @since 11/01/2024
+ */
 fun showInvoice(waterConsumption: Int, literCost: Float = 0f, waterCost: Float = 0f, fixedFee: Int, totalCost: Float,
                 hasSocialBonus: Boolean = false, isNumerous: Boolean = false, isSingleParent: Boolean = false,
                 familySize: Int = 0, discount: Float = 0f) {
