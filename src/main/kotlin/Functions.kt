@@ -98,5 +98,5 @@ fun getDiscount(isNumerous: Boolean, isSingleParent: Boolean, familySize: Int, h
  */
 fun getWaterCost(waterConsumption: Int, literCost: Float, discount: Float): Float {
     val waterCost:Float = waterConsumption * literCost
-    return waterCost * discount
+    return roundToFloat(waterCost * discount, 2)
 }
