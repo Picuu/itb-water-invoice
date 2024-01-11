@@ -67,6 +67,16 @@ fun getLiterCost(waterConsumption: Int):Float {
     return .15f
 }
 
+/**
+ * This method calculates the discount the user will get based on various parameters.
+ * @param isNumerous Boolean of whether the user forms part of a numerous family or not.
+ * @param isSingleParent Boolean of whether the user forms part of a single-parent family or not.
+ * @param familySize Integer of the amount of people on the user's family. This parameter is optional.
+ * @param hasSocialBonus Boolean of whether the user has a social bonus or not.
+ * @return Float of the discount the user will get.
+ * @author Picuu
+ * @since 11/01/2024
+ */
 fun getDiscount(isNumerous: Boolean, isSingleParent: Boolean, familySize: Int, hasSocialBonus: Boolean): Float {
     if (hasSocialBonus) return .2f
     if (isNumerous) return .5f
