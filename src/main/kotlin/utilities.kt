@@ -344,5 +344,5 @@ fun roundToFloat(num: Float, decimals: Int): Float {
     for (i in 1..decimals) multiplicator += "0"
 
     val rounded = (num * multiplicator.toInt()).toInt()
-    return rounded / multiplicator.toFloat()
+    return rounded.toFloat() / multiplicator.toInt()
 }
