@@ -41,6 +41,7 @@ Modular Kotlin project that emulates calculating a water bill invoice.
 └── src
     ├── main
     │   └── kotlin
+    │       ├── AppMessages.kt
     │       ├── Functions.kt
     │       ├── Main.kt
     │       ├── consoleColors.kt
@@ -53,6 +54,7 @@ Modular Kotlin project that emulates calculating a water bill invoice.
 ## 📝 Project Summary
 
 - [src/main/kotlin/Main.kt](src/main/kotlin/Main.kt): Main application code.
+- [src/main/kotlin/AppMessages.kt](src/main/kotlin/AppMessages.kt): Modular file with input and output functions to get values and data from the user.
 - [src/main/kotlin/Functions.kt](src/main/kotlin/Functions.kt): Modular file with functions and logic to execute the aplication.
 - [src/main/kotlin/utilities.kt](src/main/kotlin/Utilities.kt): Modular file with reusable methods.
 - [src/main/kotlin/consoleColors.kt](src/main/kotlin/ConsoleColors.kt): File with constants for terminal colors.
