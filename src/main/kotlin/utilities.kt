@@ -339,10 +339,10 @@ fun readFloat(pMessageIn: String
  * @param decimals Amount of decimals to round the number.
  * @return The given number rounded to the specified decimals.
  */
-fun roundToFloat(num: Float, decimals: Int): Float {
+fun roundToFloat(num: Number, decimals: Int): Float {
     var multiplicator:String = "1"
     for (i in 1..decimals) multiplicator += "0"
 
-    val rounded = (num * multiplicator.toInt()).toInt()
+    val rounded = (num.toDouble() * multiplicator.toInt()).toInt()
     return rounded.toFloat() / multiplicator.toInt()
 }
