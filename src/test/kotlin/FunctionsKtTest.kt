@@ -3,38 +3,6 @@ import org.junit.jupiter.api.*
 
 class FunctionsKtTest {
 
-/* //    This tests can't be executed because we cannot write keyboard inputs while executing tests.
-    @Test
-    fun testGetWaterConsumption() {
-        assertNotNull(getWaterConsumption())
-        assertTrue(getWaterConsumption() is Int)
-    }
-
-    @Test
-    fun testIsNumerousFamily() {
-        assertNotNull(isNumerousFamily())
-        assertTrue(isNumerousFamily() is Boolean)
-    }
-
-    @Test
-    fun testIsSingleParnetFamily() {
-        assertNotNull(isSingleParentFamily())
-        assertTrue(isSingleParentFamily() is Boolean)
-    }
-
-    @Test
-    fun testGetFamilySize() {
-        assertNotNull(getFamilySize())
-        assertTrue(getFamilySize() is Int)
-    }
-
-    @Test
-    fun testHasSocialBonus() {
-        assertNotNull(hasSocialBonus())
-        assertTrue(hasSocialBonus() is Boolean)
-    }
-*/
-
     @Test
     fun testGetFixedFee() {
         assertNotNull(getFixedFee(true))
